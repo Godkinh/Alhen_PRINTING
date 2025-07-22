@@ -1,0 +1,431 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,h1,h3,h4,h5{
+    margin:0;
+    padding: 0;
+}
+
+p{
+    margin: 0;
+}
+
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@for $i from 1 through 12 {
+    .col#{$i} {
+        width: (100% / (12 / $i)) - 3%;
+        margin: 1.5%;
+    }
+}
+
+.header{
+    padding: 20px 0;
+}
+
+/*navbar*/
+
+.nav-container{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 1.5%;
+    justify-content: space-between;
+    align-items: center;
+
+    &-brand{
+        h1{
+            a{
+                text-decoration: none;
+                color: black;
+                span{
+                    color: rgb(8, 136, 179);
+                }
+            }
+        }
+    }
+    &-menu {
+        a{
+            text-decoration: none;
+            color: black;
+            padding: 13px;
+            border-radius: 20px;
+            &:hover{
+                color: rgb(9, 66, 135);
+            }
+            &:active{
+                background: greenyellow;
+            }
+        }
+    }
+}
+
+/*navbar*/
+
+/*Profile*/
+
+/* Reset margin dan padding untuk seluruh elemen */
+.slr {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Mengatur gaya untuk body */
+.badan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   
+}
+
+/* Mengatur gaya untuk container */
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 80%;
+}
+
+/* Mengatur gaya untuk video-wrapper */
+.video-wrapper {
+    width: 60%;
+    max-width: 800px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mengatur gaya untuk video */
+
+/* Define the keyframes for the fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to the video element */
+video {
+    width: 100%;
+    border-radius: 10px;
+    animation: fadeIn 2s ease-out;
+}
+
+/*Profile*/
+
+/*slide show*/
+.overlay{
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0);
+    z-index: 9999;
+    transition: .5s;
+}
+
+.overlay:target {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,.8);
+}
+
+
+
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.card-wrapper {
+    max-width: 1100px;
+    margin: 0 60px 35px;
+    padding: 20px 10px;
+    overflow: hidden;
+}
+
+.card-list .card-item{
+    list-style: none;
+}
+
+.card-list .card-item .card-link{
+    user-select: none;
+    display: block;
+    background: #fff;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 10px rgba(0,0,0, 0.09);
+    transition: 0.2s ease;
+}
+
+.card-list .card-item .card-link:active{
+    cursor: grabbing;
+}
+
+.card-list .card-item .card-link:hover{
+    border-color: greenyellow;
+}
+
+.card-list .card-link .card-image{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+
+.card-list .card-link .badge{
+  color: rgb(57, 57, 218);
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  font-family: 500;
+  margin: 16px 0 18px;
+  background: #DDE4FF;
+  width: fit-content;
+  border-radius: 50px;
+}
+
+.card-list .card-link .badge.satu{
+    color: #B25A2B;
+    background: #FFE3D2;
+}
+
+.card-list .card-link .badge.dua{
+    color: #B22485;
+    background: #F7DFF5;
+}
+
+.card-list .card-link .badge.tiga{
+    color: #205C20;
+    background: #D6F8D6;
+}
+
+.card-list .card-link .badge.empat{
+    color:  rgb(57, 57, 218);
+    background: #DDE4FF;
+}
+
+.card-list .card-link .card-title{
+    font-size: 1.19rem;
+    color: greenyellow;
+    font-weight: 600;
+}
+
+.card-list .card-link .card-button{
+    height: 35px;
+    width: 35px;
+    color: #5372F0;
+    border-radius: 50%;
+    margin: 30px 0 5px;
+    background: none;
+    cursor: pointer;
+    border: 2px solid #5372F0;
+    transform: rotate(-45deg);
+    transition: 0.4s ease;
+}
+
+.card-list .card-link:hover .card-button{
+    color: #fff;
+    background: #5372F0;
+}
+
+.card-wrapper .swiper-pagination-bullet {
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background: #5372F0;
+}
+
+
+.card-wrapper .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.card-wrapper .swiper-slide-button {
+    color:  #5372F0;
+    margin-top: -35px;
+}
+
+@media screen and (max-width: 768px) {
+    .card-wrapper {
+        margin: 0 10px 25px;
+    }
+
+    .card-wrapper .swiper-slide-button{
+        display: none;
+    }
+}
+
+.overlay .close{
+   position: absolute;
+   top: 50px;
+   left: 50%;
+   margin-left: -40px;
+   color: white;
+   text-decoration: none;
+   padding: 13px;
+   border-radius: 20px;
+   background: yellowgreen;
+
+}
+
+
+
+
+/*slide show*/
+
+.ai-center{
+    align-items: center;
+}
+
+.img-responsive{
+    width: 100%;
+}
+
+.hero{
+    padding: 5% 0;
+    &-desc{
+        h1{
+            font-size: 2.5em;
+            line-height: 120%;
+            margin-bottom: 20px;
+            span{
+                color: yellowgreen;
+            }
+        }
+
+        p{
+            line-height: 180%;
+        }
+    }
+}
+
+.spacer30{
+   height: 30px;
+}
+
+.btn{
+    background: greenyellow;
+    color: white;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    &hover{
+        color: wheat;
+        background: rgb(9, 66, 135);
+    }
+}
+
+.layanan{
+    padding: 5% ;
+    transition: transform 0.3s ease;
+    &-card{
+        box-shadow: 0px 1px 9px 8px #d5cdcd;
+        padding: 15px;
+        box-sizing: border-box;
+        .lc-desc{
+           h3{
+            text-transform: capitalize;
+            font-size: 20px;
+            margin-bottom: 10px;
+           } 
+           P{
+            font-size: 14px;
+            color: #777;
+           }
+        }
+        .lc-price{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 10px;
+            color: rgb(124, 204, 3);
+            .price-tag{
+                font-size: 20px;
+            }
+            .price-num{
+                font-weight: 500;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.layanan:hover{
+    transform: translateY(-10px);
+}
+
+.service{
+    padding: 8% 0;
+    background-color: yellowgreen;
+    color: white;
+    &-desc{
+        h3{
+            margin-bottom: 20px;
+        }
+        p{
+            line-height: 180%;
+        }
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+            padding: 5px 0;
+            a{
+                color: rgb(255, 241, 215);
+            }
+        }
+    }
+}
+
+/*slider*/
+
+
+
+
+
